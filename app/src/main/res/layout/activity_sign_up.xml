@@ -1,10 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SignUpActivity">
+    tools:context=".activities.SignUpActivity"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_bg_2"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sign Up To Continue"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textAlignment="center" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_border">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginStart="30dp"
+           android:layout_marginEnd="30dp">
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="30dp"
+               app:boxStrokeColor="@color/orange"
+               app:hintTextColor="@color/btncolor">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/etName"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Name" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               app:boxStrokeColor="@color/orange"
+               app:hintTextColor="@color/btncolor">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/etEMail"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Email" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               app:boxStrokeColor="@color/orange"
+               app:hintTextColor="@color/btncolor">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/etPassword"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Password"
+                   android:inputType="textPassword" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               app:boxStrokeColor="@color/orange"
+               app:hintTextColor="@color/btncolor">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/etUserId"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="User ID" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+           <RadioGroup
+               android:id="@+id/radioGroup"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp">
+
+               <RadioButton
+                   android:id="@+id/rbAdmin"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Admin"
+                   android:textColor="@color/black" />
+
+               <RadioButton
+                   android:id="@+id/rbCustomer"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Customer"
+                   android:textColor="@color/black" />
+           </RadioGroup>
+
+
+           <Button
+               android:id="@+id/btnSignUp"
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"
+               android:text="Sign Up"
+               android:layout_gravity="center"
+               android:backgroundTint="@color/btncolor"
+               android:layout_marginTop="10dp" />
+
+
+           <TextView
+               android:id="@+id/tvAlreadyRegistered"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="If Already Registered ? Click SignIn"
+               android:textAlignment="center"
+               android:textColor="@color/blue"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="25dp" />
+
+       </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 
 
 }
@@ -53,9 +54,13 @@ dependencies {
     // CircleImageView (optional if you use Glide)
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
+    implementation ("com.google.android.material:material:1.11.0")
+
+
     // Material Design
     implementation("com.google.android.material:material:1.10.0")
     implementation(libs.activity)
+    implementation(libs.firebase.database)
 
 
     // Testing
