@@ -2,8 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
-
-
 }
 
 android {
@@ -51,19 +49,12 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // CircleImageView (optional if you use Glide)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.storage.ktx)
+
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
-    implementation ("com.google.android.material:material:1.11.0")
-
-
-    // Material Design
-    implementation("com.google.android.material:material:1.10.0")
-    implementation(libs.activity)
-    implementation(libs.firebase.database)
-
-
-    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

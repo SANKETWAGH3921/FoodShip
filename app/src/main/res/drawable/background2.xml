@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- White Border -->
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="20dp" />
+            <solid android:color="#FFFFFF"/> <!-- White Border -->
+
+        </shape>
+    </item>
+
+    <!-- Inner Transparent Background with Gradient -->
+    <item android:left="3dp" android:right="3dp" android:top="3dp" android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <size android:height="20dp" />
+            <gradient
+                android:type="linear"
+                android:startColor="#FF5722"
+                android:centerColor="#DA6C49"
+                android:endColor= "#DCA796"
+                android:angle="0" />
+             <!-- Slightly less than outer radius for a border effect -->
+        </shape>
+    </item>
+
+</layer-list>

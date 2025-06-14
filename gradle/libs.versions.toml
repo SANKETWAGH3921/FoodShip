@@ -1,23 +1,35 @@
 [versions]
-activity = "1.10.1"
-googleGmsGoogleServices = "4.4.2"
-firebaseDatabase = "21.0.0"
-[plugins]
-android-application = { id = "com.android.application", version = "8.4.0" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.0" }
-google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+kotlin = "1.9.10"
+androidx-core-ktx = "1.12.0"
+appcompat = "1.6.1"
+material = "1.11.0"
+activity = "1.8.2"
+constraintlayout = "2.1.4"
+firebase-auth = "22.3.1"
+firebase-database = "20.3.1"
+firebase-storage = "20.3.0"
+junit = "4.13.2"
+androidx-junit = "1.1.5"
+androidx-espresso-core = "3.5.1"
+agp = "8.3.0"
+gms = "4.4.1"
 
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "gms" }
 
 [libraries]
-androidx-core-ktx = "androidx.core:core-ktx:1.12.0"
-androidx-appcompat = "androidx.appcompat:appcompat:1.6.1"
-material = "com.google.android.material:material:1.10.0"
-androidx-activity = "androidx.activity:activity-ktx:1.8.0"
-androidx-constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core-ktx" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 
+firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebase-auth" }
+firebase-database = { module = "com.google.firebase:firebase-database-ktx", version.ref = "firebase-database" }
+firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebase-storage" }
 
-junit = "junit:junit:4.13.2"
-androidx-junit = "androidx.test.ext:junit:1.1.5"
-androidx-espresso-core = "androidx.test.espresso:espresso-core:3.5.1"
-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
-firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+junit = { module = "junit:junit", version.ref = "junit" }
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-espresso-core" }
